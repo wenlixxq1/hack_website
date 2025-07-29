@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Security Alert</title>
+    <link rel="stylesheet" href="hack.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='red' d='M8 1l7 7-7 7-7-7z'/%3E%3C/svg%3E">
+</head>
+<body>
+    <!-- Фаза 1: Предупреждение -->
+    <div id="phase1" class="phase active">
+        <div class="warning-screen">
+            <div class="warning-header">
+                <span class="warning-icon">⚠️</span>
+                <h1>SECURITY BREACH DETECTED</h1>
+            </div>
+            <div class="warning-content">
+                <p>🔴 <strong>CRITICAL ALERT:</strong> Malicious script detected in your network</p>
+                <p>📍 Your IP: <span id="user-ip">192.168.1.xxx</span> has been logged</p>
+                <p>💻 System: <span id="user-system">Unknown</span></p>
+                <p>🌐 Browser: <span id="user-browser">Unknown</span></p>
+                <div class="scanning">
+                    <p>🔍 Scanning system directories...</p>
+                    <div class="progress-bar">
+                        <div class="progress" id="scan-progress"></div>
+                    </div>
+                    <p id="scan-status">Initializing...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Фаза 2: Проникновение -->
+    <div id="phase2" class="phase">
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <span class="terminal-title" id="terminal-title">Command Prompt</span>
+                <div class="terminal-controls">
+                    <span class="control minimize">−</span>
+                    <span class="control maximize">□</span>
+                    <span class="control close">×</span>
+                </div>
+            </div>
+            <div class="terminal-body" id="terminal">
+                <div class="terminal-line">Microsoft Windows [Version 10.0.19044.1234]</div>
+                <div class="terminal-line">(c) Microsoft Corporation. All rights reserved.</div>
+                <div class="terminal-line"></div>
+                <div class="terminal-line">C:\Users\<span id="username">User</span>&gt;</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Фаза 3: Утечка данных -->
+    <div id="phase3" class="phase">
+        <div class="data-breach">
+            <h2>🔓 DATA EXTRACTION IN PROGRESS</h2>
+            <div class="webcam-section">
+                <video id="webcam" autoplay muted></video>
+                <canvas id="webcam-canvas"></canvas>
+                <div class="webcam-overlay">HACKED</div>
+            </div>
+            <div class="file-list">
+                <h3>📁 Files being uploaded:</h3>
+                <div id="file-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Фаза 4: Ransomware -->
+    <div id="phase4" class="phase">
+        <div class="ransomware-screen">
+            <div class="skull">💀</div>
+            <h1>YOUR FILES HAVE BEEN ENCRYPTED!</h1>
+            <div class="ransomware-content">
+                <p>All your personal files, photos, documents have been encrypted with military-grade encryption.</p>
+                <p>To decrypt your files, you must pay:</p>
+                <div class="payment-info">
+                    <div class="bitcoin-amount">0.001 BTC (~$50)</div>
+                    <div class="bitcoin-address" id="btc-address">1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</div>
+                    <button class="copy-btn" onclick="copyBTC()">Copy Address</button>
+                </div>
+                <div class="countdown">
+                    <p>Time remaining: <span id="countdown">02:00:00</span></p>
+                    <p>After this time, your files will be permanently deleted!</p>
+                    <p style="color:#ff6600;font-size:1.2rem;margin-top:1rem;">⚠️ WARNING: This is not a drill! Pay immediately!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Фаза 5: Финал -->
+    <div id="phase5" class="phase">
+        <div class="gotcha-screen">
+            <div class="gotcha-content">
+                <h1>🎉 GOTCHA!</h1>
+                <p>Это был всего лишь пранк! 😂</p>
+                <p>Твой компьютер в полной безопасности...</p>
+                <p class="threat">...пока что. 😈</p>
+                <div class="meme">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect width='200' height='200' fill='%23228B22'/%3E%3Ccircle cx='60' cy='80' r='15' fill='%23fff'/%3E%3Ccircle cx='140' cy='80' r='15' fill='%23fff'/%3E%3Cpath d='M50 130 Q100 160 150 130' stroke='%23fff' fill='none' stroke-width='5'/%3E%3Ctext x='100' y='180' text-anchor='middle' fill='%23fff' font-size='16'%3ESHREK%3C/text%3E%3C/svg%3E" alt="Shrek">
+                </div>
+                <button onclick="location.reload()" class="restart-btn">Запустить снова</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Системная информация -->
+    <div id="system-info">
+        <div>Status: <span id="hack-status">SCANNING</span></div>
+        <div>Processes: <span id="process-count">0</span></div>
+        <div>Network: <span id="network-status">MONITORING</span></div>
+    </div>
+
+    <script src="hack-sim.js"></script>
+</body>
+</html>
