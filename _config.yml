@@ -1,4 +1,0 @@
-plugins: []
-markdown: kramdown
-highlighter: rouge
-include: [".nojekyll"]
